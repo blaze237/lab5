@@ -11,8 +11,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper
 {
 
+    public static final String KEY_NAME = "name";
+
     public DBHelper(Context context) {
-        super(context, "testDB", null, 2449);
+        super(context, "testDB", null, 23677);
     }
 
     @Override
@@ -21,8 +23,7 @@ public class DBHelper extends SQLiteOpenHelper
         db.execSQL("CREATE TABLE myList (" +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name VARCHAR(128), " +
-                "colour VARCHAR(128)," +
-                "test VARCHAR(128)" +
+                "colour VARCHAR(128)" +
                 ");");
     }
 
